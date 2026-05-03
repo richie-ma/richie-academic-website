@@ -9,7 +9,7 @@
 <meta name="author" content="Richie Ma">
 <meta name="description" content="Quarto Academic Website">
 
-<title>People – Richie R. Ma</title>
+<title>futures – Richie R. Ma</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -76,63 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-lab-member .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-image","listing-title","listing-lastname","listing-subtitle","listing-categories","listing-started","listing-ended"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-lab-member'] = new List('listing-lab-member', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-lab-alumni .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-started','listing-ended',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-image","listing-title","listing-lastname","listing-subtitle","listing-categories","listing-started","listing-ended"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-lab-alumni'] = new List('listing-lab-alumni', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id="></script>
 
 <script type="text/javascript">
@@ -182,40 +123,12 @@ https://badge.dimensions.ai/
 
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="People – Richie R. Ma">
-<meta property="og:description" content="Who we are">
-<meta property="og:image" content="./files/profiles/profile1.JPG">
+<link rel="stylesheet" href="custom.css">
+<meta property="og:title" content="Richie R. Ma">
+<meta property="og:description" content="Quarto Academic Website">
+<meta property="og:image" content="https://quarto.org/quarto.png">
 <meta property="og:site_name" content="Richie R. Ma">
 </head>
 
@@ -415,6 +328,14 @@ window.Quarto = {
     <a class="nav-link" href="./teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./packages.html"> 
+<span class="menu-text">Programming packages</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./futures.html" aria-current="page"> 
+<span class="menu-text">Futures Data</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -440,223 +361,212 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="RGlyZWN0b3I=">Director <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFzdGVycyUyMFN0dWRlbnQ=">Masters Student <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGhEJTIwU3R1ZGVudA==">PhD Student <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VW5kZXJncmFkdWF0ZSUyMFN0dWRlbnQ=">Undergraduate Student <span class="quarto-category-count">(2)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">People</h1>
-<p class="subtitle lead">Who we are</p>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="team" class="level2">
-<h2 class="anchored" data-anchor-id="team">Team</h2>
-<div id="listing-lab-member" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="UGhEJTIwU3R1ZGVudA==">
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img loading="lazy" src="./files/profiles/profile1.JPG" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Student A
-</h5>
-<div class="card-subtitle listing-subtitle">
-PhD Student
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="TWFzdGVycyUyMFN0dWRlbnQ=">
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img loading="lazy" src="./files/profiles/profile3.JPG" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Student B
-</h5>
-<div class="card-subtitle listing-subtitle">
-Masters Student
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="VW5kZXJncmFkdWF0ZSUyMFN0dWRlbnQ=">
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img loading="lazy" src="./files/profiles/profile5.JPG" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Student C
-</h5>
-<div class="card-subtitle listing-subtitle">
-Undergraduate Student
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="RGlyZWN0b3I=">
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-center">
-<p class="card-img-top">
-<img loading="lazy" src="./files/profiles/profile7.JPG" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-PI Name
-</h5>
-<div class="card-subtitle listing-subtitle">
-PI
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="alumni" class="level2">
-<h2 class="anchored" data-anchor-id="alumni">Alumni</h2>
-<div id="listing-lab-alumni" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-lab-alumni-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-lab-alumni'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-image" data-direction="asc">
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Name
-      </option>
-      <option value="listing-subtitle" data-direction="asc">
-        Role
-      </option>
-      <option value="listing-started" data-direction="asc">
-        Started
-      </option>
-      <option value="listing-ended" data-direction="asc">
-        Ended
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#price-limit-days-in-agricultural-futures-markets" id="toc-price-limit-days-in-agricultural-futures-markets" class="nav-link active" data-scroll-target="#price-limit-days-in-agricultural-futures-markets">Price limit days in agricultural futures markets</a></li>
+  </ul>
+</nav>
     </div>
-</div>
-<table class="quarto-listing-table table">
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<p>I would like to share some useful statistics that are hard to collect and hope these data can encourage research in futures markets.</p>
+<section id="price-limit-days-in-agricultural-futures-markets" class="level1">
+<h1>Price limit days in agricultural futures markets</h1>
+<ul>
+<li>Price limit is one of the ways that exchanges would use to monitor trading activities, especially extreme price movements. In the agricultural futures markets, CME has implemented different price limit schedules.</li>
+<li>A common characteristic is that price limits would “lock” markets when limit prices are reached. It does not mean markets are halted and no trades can occur, like circuit breakers. In fact, trades can still be executed unless only for one side. Specifically, selling during limit-up days and buying during limit-down days.</li>
+<li>CME revises the limit prices routinely according to market conditions and the limit price range can be expandable after the day when price limits are triggered. In 2014 (2015), CME implemented expandable price limits to 4.5 cents/lb. in live cattle (lean hog) futures markets once standard limit criterion is reached.</li>
+<li>(Examples) Price limit events in live cattle outright futures markets during 2015 to 2019 (1st–4th nearby).</li>
+</ul>
+<table class="caption-top table">
 <thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-image" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;"> </a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Name</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-subtitle" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Role</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-started" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Started</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-ended" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Ended</a>
-</th>
-
+<tr class="header">
+<th>Date</th>
+<th>Contract</th>
+<th>High Limit</th>
+<th>Low Limit</th>
+<th>Day</th>
 </tr>
 </thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="UGhEJTIwU3R1ZGVudA==" data-listing-title-sort="Alumni A">
-<td>
-<span class="listing-image"><img loading="lazy" src="./files/profiles/profile2.JPG" style="height: 25px;"></span>
-</td>
-<td>
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="title listing-title">Alumni A</a>
-</td>
-<td>
-<span class="listing-subtitle">PhD Alumni</span>
-</td>
-<td>
-<span class="listing-started">2022-01</span>
-</td>
-<td>
-<span class="listing-ended">2026-01</span>
-</td>
-
+<tbody>
+<tr class="odd">
+<td>2015-01-27</td>
+<td>LEG5</td>
+<td>152.83</td>
+<td>146.83</td>
+<td>limit_up</td>
 </tr>
-
-<tr data-index="1" data-categories="TWFzdGVycyUyMFN0dWRlbnQ=" data-listing-title-sort="Alumni B">
-<td>
-<span class="listing-image"><img loading="lazy" src="./files/profiles/profile4.JPG" style="height: 25px;"></span>
-</td>
-<td>
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="title listing-title">Alumni B</a>
-</td>
-<td>
-<span class="listing-subtitle">Masters Alumni</span>
-</td>
-<td>
-<span class="listing-started">2024-01</span>
-</td>
-<td>
-<span class="listing-ended">2025-01</span>
-</td>
-
+<tr class="even">
+<td>2015-01-27</td>
+<td>LEJ5</td>
+<td>151.00</td>
+<td>145.00</td>
+<td>limit_up</td>
 </tr>
-
-<tr data-index="2" data-categories="VW5kZXJncmFkdWF0ZSUyMFN0dWRlbnQ=" data-listing-title-sort="Alumni C">
-<td>
-<span class="listing-image"><img loading="lazy" src="./files/profiles/profile6.JPG" style="height: 25px;"></span>
-</td>
-<td>
-<a href="https://drganghe.github.io/quarto-academic-website-template" class="title listing-title">Alumni C</a>
-</td>
-<td>
-<span class="listing-subtitle">Undergraduate Alumni</span>
-</td>
-<td>
-<span class="listing-started">2023-01</span>
-</td>
-<td>
-<span class="listing-ended">2024-01</span>
-</td>
-
+<tr class="odd">
+<td>2015-02-06</td>
+<td>LEJ5</td>
+<td>151.03</td>
+<td>145.03</td>
+<td>limit_up</td>
 </tr>
-
+<tr class="even">
+<td>2015-02-06</td>
+<td>LEM5</td>
+<td>144.25</td>
+<td>138.25</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2015-02-13</td>
+<td>LEJ5</td>
+<td>154.13</td>
+<td>148.13</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-04-26</td>
+<td>LEQ7</td>
+<td>115.05</td>
+<td>109.05</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-04-27</td>
+<td>LEG8</td>
+<td>117.78</td>
+<td>111.78</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-04-27</td>
+<td>LEJ8</td>
+<td>116.65</td>
+<td>110.65</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-04-27</td>
+<td>LEM7</td>
+<td>121.53</td>
+<td>115.53</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-05-02</td>
+<td>LEM7</td>
+<td>127.13</td>
+<td>121.13</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-05-03</td>
+<td>LEM7</td>
+<td>130.05</td>
+<td>124.05</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-05-04</td>
+<td>LEM7</td>
+<td>134.55</td>
+<td>125.55</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-06-01</td>
+<td>LEQ7</td>
+<td>124.70</td>
+<td>118.70</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-07-12</td>
+<td>LEZ7</td>
+<td>118.33</td>
+<td>112.33</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-08-15</td>
+<td>LEZ7</td>
+<td>111.80</td>
+<td>105.80</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2017-10-30</td>
+<td>LEG8</td>
+<td>128.75</td>
+<td>122.75</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2017-11-03</td>
+<td>LEG8</td>
+<td>131.75</td>
+<td>125.75</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2018-02-01</td>
+<td>LEJ8</td>
+<td>125.93</td>
+<td>119.93</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2018-04-04</td>
+<td>LEM8</td>
+<td>102.63</td>
+<td>96.63</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2018-05-21</td>
+<td>LEM8</td>
+<td>105.40</td>
+<td>99.40</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2018-06-29</td>
+<td>LEV8</td>
+<td>110.03</td>
+<td>104.03</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2018-09-14</td>
+<td>LEZ8</td>
+<td>118.40</td>
+<td>112.40</td>
+<td>limit_up</td>
+</tr>
+<tr class="odd">
+<td>2019-06-10</td>
+<td>LEQ9</td>
+<td>106.30</td>
+<td>100.30</td>
+<td>limit_up</td>
+</tr>
+<tr class="even">
+<td>2019-06-10</td>
+<td>LEV9</td>
+<td>107.50</td>
+<td>101.50</td>
+<td>limit_up</td>
+</tr>
 </tbody>
 </table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
+<p>Click here to get the full price limit events for <a href="https://www.dropbox.com/scl/fi/k5tkz5sy3vuo8lqt98lia/live_cattle_limit_days.csv?rlkey=jwkk1q5nfc8150fr8hh6mgxsy&amp;dl=0">live cattle</a> and <a href="https://www.dropbox.com/scl/fi/d04ig9zbv7ezg4b4hz2k4/lean_hog_limit_days.csv?rlkey=505gc8f7ev8vwd8bmrmeeggro&amp;dl=0">lean hog</a>.</p>
 
 
 </section>
